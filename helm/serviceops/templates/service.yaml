@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: serviceops
+spec:
+  type: {{ .Values.service.type }}
+  selector:
+    app: serviceops
+  ports:
+    - port: {{ .Values.service.port }}
+      target: 8000

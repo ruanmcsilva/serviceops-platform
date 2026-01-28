@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: serviceops-config
+data:
+  DEBUG: {{ .Values.env.DEBUG | quote }}
+  POSTGRES_HOST: {{ .Values.env.POSTGRES_HOST | quote }}
+  POSTGRES_PORT: {{ .Values.env.POSTGRES_PORT | quote }}
